@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano Tático - Operação EVS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-matrix { background-color: #0f172a; }
+        .text-neon { color: #4ade80; text-shadow: 0 0 10px rgba(74, 222, 128, 0.5); }
+        .border-neon { border-color: #4ade80; }
+        .glass-dark { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); }
+        
+        .timeline-line {
+            position: absolute;
+            left: 15px;
+            top: 20px;
+            bottom: 0;
+            width: 2px;
+            background: #334155;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 pb-10">
+
+    <!-- Header "Top Secret" -->
+    <header class="border-b border-slate-800 bg-slate-950/90 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i data-lucide="crosshair" class="text-green-500 w-5 h-5"></i>
+                <span class="font-bold tracking-tight text-white">PLANO TÁTICO <span class="text-slate-600">|</span> 30 DIAS</span>
+            </div>
+            <div class="bg-green-900/30 border border-green-500/30 text-green-400 text-[10px] font-bold px-2 py-1 rounded uppercase">
+                Status: Aguardando
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="pt-10 pb-8 px-6 max-w-xl mx-auto">
+        <h1 class="text-3xl font-black text-white mb-2 leading-tight">
+            Operação <span class="text-neon">EVS Lotado</span>
+        </h1>
+        <p class="text-slate-400 text-sm leading-relaxed border-l-2 border-green-600 pl-4 mt-4">
+            Estratégia detalhada para maximizar a ocupação dos horários ociosos e converter tráfego frio em contratos recorrentes.
+        </p>
+    </section>
+
+    <!-- As Duas Frentes de Batalha (Ofertas) -->
+    <section class="px-6 mb-10 max-w-xl mx-auto">
+        <h2 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">01. Estrutura de Oferta</h2>
+        
+        <div class="grid gap-4">
+            <!-- Oferta Manhã -->
+            <div class="bg-slate-900 rounded-xl p-5 border border-slate-800 relative overflow-hidden group hover:border-blue-500 transition-colors">
+                <div class="absolute top-0 right-0 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg">07:30 às 11:00</div>
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="bg-blue-900/30 p-2 rounded-lg text-blue-400"><i data-lucide="activity" class="w-5 h-5"></i></div>
+                    <h3 class="font-bold text-white">Consultoria & Resultado</h3>
+                </div>
+                <p class="text-xs text-slate-400 mb-4">Foco em dor, emagrecimento e acompanhamento.</p>
+                
+                <div class="space-y-2">
+                    <div class="flex justify-between items-center bg-slate-950 p-2 rounded border border-slate-800">
+                        <span class="text-sm font-medium">Pacote 10 Dias</span>
+                        <span class="text-green-400 font-bold">R$ 250,00</span>
+                    </div>
+                    <div class="flex justify-between items-center bg-slate-950 p-2 rounded border border-slate-800">
+                        <span class="text-sm font-medium">Pacote 30 Dias</span>
+                        <span class="text-green-400 font-bold">R$ 700,00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Oferta Almoço -->
+            <div class="bg-slate-900 rounded-xl p-5 border border-slate-800 relative overflow-hidden group hover:border-green-500 transition-colors">
+                <div class="absolute top-0 right-0 bg-green-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg">11:00 às 14:00</div>
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="bg-green-900/30 p-2 rounded-lg text-green-400"><i data-lucide="utensils" class="w-5 h-5"></i></div>
+                    <h3 class="font-bold text-white">Almoço Saudável</h3>
+                </div>
+                <p class="text-xs text-slate-400 mb-4">Foco em rapidez, sabor e custo-benefício.</p>
+                
+                <div class="space-y-2">
+                    <div class="flex justify-between items-center bg-slate-950 p-2 rounded border border-slate-800">
+                        <span class="text-sm font-medium">Acesso Único</span>
+                        <span class="text-white font-bold">R$ 29,50</span>
+                    </div>
+                    <div class="flex justify-between items-center bg-green-900/20 p-2 rounded border border-green-900/50">
+                        <div class="flex flex-col">
+                            <span class="text-sm font-bold text-green-400">Cartela 12 Acessos</span>
+                            <span class="text-[10px] text-green-600">Ganha 1 Bônus (Pix)</span>
+                        </div>
+                        <span class="text-xl font-black text-green-400">R$ 354</span>
+                    </div>
+                    <div class="text-[10px] text-right text-slate-500">Ou R$ 372 no Cartão</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Protocolo de Aceleração (Ads vs Organico) -->
+    <section class="px-6 mb-10 max-w-xl mx-auto">
+        <h2 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">02. Protocolo de Aceleração</h2>
+        
+        <div class="bg-slate-900 rounded-xl border border-slate-800 p-1 overflow-hidden">
+            <div class="grid grid-cols-2 gap-1 mb-4">
+                <div class="bg-green-900/20 rounded-lg p-3 border border-green-500/30">
+                    <p class="text-[10px] text-green-400 font-bold uppercase mb-1 flex items-center gap-1">
+                        <i data-lucide="rocket" class="w-3 h-3"></i> Recomendado
+                    </p>
+                    <p class="text-sm font-bold text-white">Modo Turbo</p>
+                    <p class="text-[10px] text-slate-300 mt-1 leading-tight">
+                        Investimento mínimo de <strong class="text-white">R$ 10,00/dia</strong> ou reinvestir o lucro do <strong class="text-white">1º acesso</strong> (R$ 30,00).
+                    </p>
+                </div>
+                <div class="bg-slate-800/50 rounded-lg p-3 border border-slate-700">
+                    <p class="text-[10px] text-slate-500 font-bold uppercase mb-1 flex items-center gap-1">
+                        <i data-lucide="shield" class="w-3 h-3"></i> Opcional
+                    </p>
+                    <p class="text-sm font-bold text-slate-300">Modo Orgânico</p>
+                    <p class="text-[10px] text-slate-500 mt-1">Investimento Zero. Crescimento baseado em suor e tempo.</p>
+                </div>
+            </div>
+            
+            <div class="px-3 pb-3">
+                <div class="flex items-start gap-3 bg-slate-950 p-3 rounded-lg border border-yellow-500/20">
+                    <i data-lucide="alert-triangle" class="text-yellow-500 w-5 h-5 shrink-0 mt-0.5"></i>
+                    <div>
+                        <p class="text-xs text-yellow-500 font-bold mb-1">Regra de Ouro</p>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            O tráfego pago nos dá velocidade (resultado em 24h). O ideal é reinvestir o lucro de um shake por dia. Porém, se o caixa estiver travado, iniciamos 100% no orgânico sem problemas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Arsenal de Guerra (Táticas) -->
+    <section class="px-6 mb-10 max-w-xl mx-auto">
+        <h2 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">03. Arsenal de Guerra (Táticas)</h2>
+        
+        <div class="space-y-4">
+            <div class="flex gap-4">
+                <div class="bg-slate-800 h-10 w-10 rounded-full flex items-center justify-center shrink-0 border border-slate-700">
+                    <i data-lucide="map" class="text-yellow-400 w-5 h-5"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white text-sm">Cerca Elétrica (Raio 1km)</h4>
+                    <p class="text-xs text-slate-400 mt-1">Anúncios programados apenas entre <strong>10:30 e 13:00</strong>. Focados em quem trabalha perto.</p>
+                </div>
+            </div>
+
+            <div class="flex gap-4">
+                <div class="bg-slate-800 h-10 w-10 rounded-full flex items-center justify-center shrink-0 border border-slate-700">
+                    <i data-lucide="scale" class="text-purple-400 w-5 h-5"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white text-sm">Isca da Bioimpedância</h4>
+                    <p class="text-xs text-slate-400 mt-1">Anúncio de "Avaliação Gratuita". Traz o cliente pela curiosidade e vende a Consultoria no fechamento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cronograma 30 Dias -->
+    <section class="px-6 max-w-xl mx-auto">
+        <h2 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-6">04. Cronograma de Execução</h2>
+        
+        <div class="relative space-y-8">
+            <div class="timeline-line"></div>
+
+            <!-- Semana 1 -->
+            <div class="relative pl-10">
+                <div class="absolute left-[6px] top-1 w-5 h-5 bg-slate-800 border-2 border-slate-600 rounded-full z-10"></div>
+                <h4 class="font-bold text-white text-sm mb-1">Semana 1: Infraestrutura & Teste</h4>
+                <ul class="text-xs text-slate-400 space-y-2">
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-green-500"></i> Configuração do Business Manager.</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-green-500"></i> Criação das Artes "Food Porn" (Shakes).</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-green-500"></i> Definição da verba (Mínimo R$ 10 ou Orgânico).</li>
+                </ul>
+            </div>
+
+            <!-- Semana 2 -->
+            <div class="relative pl-10">
+                <div class="absolute left-[6px] top-1 w-5 h-5 bg-slate-800 border-2 border-slate-600 rounded-full z-10"></div>
+                <h4 class="font-bold text-white text-sm mb-1">Semana 2: Volume & Parcerias</h4>
+                <ul class="text-xs text-slate-400 space-y-2">
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-green-500"></i> Ação "Voucher Empresa": Visita a 3 lojas vizinhas.</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-green-500"></i> Otimização dos horários de pico.</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-green-500"></i> Ativação da Isca Bioimpedância.</li>
+                </ul>
+            </div>
+
+            <!-- Semana 3 -->
+            <div class="relative pl-10">
+                <div class="absolute left-[6px] top-1 w-5 h-5 bg-slate-800 border-2 border-slate-600 rounded-full z-10"></div>
+                <h4 class="font-bold text-white text-sm mb-1">Semana 3: Conversão & Upsell</h4>
+                <ul class="text-xs text-slate-400 space-y-2">
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-green-500"></i> Foco total em vender Pacotes de 10/30 dias.</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-green-500"></i> Remarketing para quem veio apenas 1 vez.</li>
+                </ul>
+            </div>
+
+            <!-- Semana 4 -->
+            <div class="relative pl-10">
+                <div class="absolute left-[6px] top-1 w-5 h-5 bg-green-500 border-2 border-green-300 shadow-[0_0_10px_rgba(34,197,94,0.5)] rounded-full z-10 animate-pulse"></div>
+                <h4 class="font-bold text-green-400 text-sm mb-1">Semana 4: O Ultimato</h4>
+                <ul class="text-xs text-slate-400 space-y-2">
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-green-500"></i> Venda das Cartelas (R$ 354) para fidelizar.</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-green-500"></i> Relatório Final de Lucro.</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-green-500"></i> Renovação do contrato (5% Lucro).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+
